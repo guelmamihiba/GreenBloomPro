@@ -1,0 +1,62 @@
+// to OPEN psql wright 
+// ==>  
+
+// to connect with db 
+// ==> \c Plantify;
+
+//  modifier la base de donné: ajouter un column code, isVerfied
+
+//     generer le code de vérification
+
+//     envoi du code (smtp)
+
+//     create methods doit etre modifier pour qu'elle accepte code comme parametre
+
+//     PARTIE FRONt
+//      box avec input, qui va accepter le code inséré par l'utilisateur.
+ 
+// import { MailingService } from '../../config/mailing//mailing.service'; // Import the MailingService
+// private mailingService: MailingService // Inject the MailingService
+// await this.mailingService.sendVerificationEmail(user.email, verificationCode); // Send verification email
+
+
+
+
+
+
+// import { Injectable } from '@nestjs/common';
+// import { Users } from './users.entity';
+// import { DataSource } from 'typeorm';
+// import { InjectDataSource } from '@nestjs/typeorm';
+
+// @Injectable()
+// export class UsersService {
+//   private readonly users: Users[] = []; // This should eventually be replaced with actual database calls
+
+//   constructor(@InjectDataSource() private readonly dataSource: DataSource, ) {}
+//   async findByEmail(email: string): Promise<Users | undefined> {
+//     return this.users.find(users => users.email === email); // Search by email
+//   }
+
+//   async create(users: Users): Promise<Users> {
+//     // this.users.push(users); 
+//     //generation de code 
+//     try {
+//      const newusers =  await  this.dataSource.createQueryBuilder()
+//       .insert()
+//       .into(Users)
+//       .values([
+//           {email: users.email, firstName: users.firstName, lastName: users.lastName, password: users.password },
+//       ])
+//       .execute()
+//     //  this.maisServie.sendMail()
+// console.log("new users succefully created", newusers)
+//     } catch(error) {
+//       console.log("Error while persisting new users", error)
+//     }
+//     return users; // Return the created user
+
+//   }
+
+// }
+

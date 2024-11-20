@@ -1,0 +1,171 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background: #f9f9f9;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  /* Plant Care Advice Section */
+  .plant-care-advice-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+  
+  .plant-care-advice-header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #6c5b7b, #355c7d);
+    border-radius: 12px;
+    color: white;
+  }
+  
+  .header-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .header-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  /* Plant Care Tips Section */
+  .plant-care-tips-section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .section-title {
+    font-size: 2.5rem;
+    color: #6c5b7b;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  
+  .care-tips-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .care-tip-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    flex: 1;
+    min-width: 250px;
+    text-align: left;
+    transition: transform 0.3s ease;
+  }
+  
+  .care-tip-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .care-tip-card h3 {
+    font-size: 1.75rem;
+    margin-bottom: 15px;
+    color: #6c5b7b;
+  }
+  
+  .care-tip-card p {
+    font-size: 1.1rem;
+    color: #777;
+    line-height: 1.6;
+  }
+  
+  /* Plant Care Gallery Section */
+  .plant-care-gallery-section {
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  .plant-care-gallery-section h2 {
+    font-size: 2.5rem;
+    color: #6c5b7b;
+    font-weight: 600;
+    margin-bottom: 40px;
+  }
+  
+  .care-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .care-gallery-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .care-gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .care-gallery-item p {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  /* Call-to-Action Section */
+  .plant-care-cta-section {
+    background: #6c5b7b;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 12px;
+    margin-top: 60px;
+  }
+  
+  .cta-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    background-color: #355c7d;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #6c5b7b;
+  }
+  

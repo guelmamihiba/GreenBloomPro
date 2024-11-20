@@ -1,0 +1,298 @@
+<<<<<<< HEAD:frontend/src/pages/HomePage.css
+.home-page {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+=======
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hero Section */
+.background-container {
+  background: linear-gradient(135deg, #2a9d8f, #00b894);
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+.welcome-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.welcome-section p {
+  font-size: 1.25rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Featured Plants Section */
+.featured-plants-section {
+  background-color: white;
+  padding: 60px 20px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  margin: 50px 0;
+}
+
+.featured-plants-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.splide__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.splide__slide {
+  transition: transform 0.3s ease;
+}
+
+.splide__slide:hover {
+  transform: scale(1.05);
+}
+
+.featured-plant {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.featured-plant:hover {
+  transform: translateY(-10px);
+}
+
+.featured-plant img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.featured-plant h3 {
+  font-size: 1.6rem;
+  color: #2a9d8f;
+}
+
+.featured-plant p {
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.6;
+}
+
+/* Categories Section */
+.categories-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f4f4f4;
+}
+
+.categories-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #00b894;
+}
+
+.category-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.category-links a {
+  padding: 12px 30px;
+  background-color: #2a9d8f;
+  color: white;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.category-links a:hover {
+  background-color: #00b894;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #333;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  margin: auto;
+}
+
+.testimonial {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 350px;
+}
+
+.testimonial p {
+  font-size: 1rem;
+  color: #777;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.testimonial p:last-child {
+  font-weight: 600;
+  color: #2a9d8f;
+  text-align: right;
+}
+
+/* Call to Action Section */
+.cta-section {
+  background-color: #2a9d8f;
+  padding: 60px 20px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 60px;
+}
+
+.cta-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cta-section p {
+  font-size: 1.25rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.cta-section .button-80 {
+  padding: 15px 30px;
+  background-color: #00b894;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-section .button-80:hover {
+  background-color: #1f9e83;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 60px;
+  border-radius: 10px;
+}
+
+.footer h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer-info {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.footer-info img {
+  width: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin: 0 15px;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #00b894;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .splide__list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+>>>>>>> 33dd0785d94d9bc76353a6735b2c312362d6e2de:frontend/src/components/HomePage.css
+  }
+
+  .category-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .category-links a {
+    font-size: 1.1rem;
+  }
+
+  .testimonial {
+    max-width: 100%;
+  }
+
+  .cta-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .cta-section p {
+    font-size: 1.1rem;
+  }
+
+  .footer-info {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,68 @@
+body {
+    background-color: #f8f9fa; /* Light background color for the whole page */
+    font-family: Arial, sans-serif; /* Font style for the text */
+  }
+  
+  .profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height for the section */
+  }
+  
+  .profile-box {
+    background: white; /* White background for the profile box */
+    padding: 30px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    width: 350px; /* Fixed width for the profile box */
+    text-align: center; /* Center-align content */
+  }
+  
+  .profile-box h1 {
+    font-size: 2.5rem; /* Large font size for "My Account" */
+    font-family: 'Georgia', serif; /* Elegant font style for the heading */
+    color: #4caf50; /* Green color for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+  }
+  
+  .profile-box h2 {
+    font-size: 1.2rem; /* Medium font size for labels */
+    color: #555; /* Gray color for labels */
+    margin-bottom: 10px; /* Space below the labels */
+  }
+  
+  .profile-details {
+    margin-bottom: 30px; /* Space below the account details */
+  }
+  
+  .logout-button {
+    background-color: #ff6b6b; /* Red background for the logout button */
+    color: white; /* White text color for the button */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners for the button */
+    font-size: 1rem; /* Medium font size for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+  }
+  
+  .logout-button:hover {
+    background-color: #ff4a4a; /* Darker red on hover */
+  }
+  
+  .address-button {
+    background-color: #007bff; /* Blue background for the "View Addresses" button */
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* No border */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 1rem; /* Medium font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+  }
+  
+  .address-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
