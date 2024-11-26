@@ -1,6 +1,8 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import * as cors from 'cors';
+import { Cron } from '@nestjs/schedule';
+import { console } from 'inspector';
 
 async function bootstrap() {
     const app = await NestFactory.create(AppModule);
@@ -12,6 +14,7 @@ async function bootstrap() {
     }));
 
     await app.listen(3000);
+  
 }
 
 

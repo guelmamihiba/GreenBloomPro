@@ -19,11 +19,16 @@ import { UsersModule } from './resources/users/users.module';
 import { Users } from './resources/users/users.entity';
 import { mailingModule,} from './config//mailing//mailing.module';
 // import { ContactUsModule } from './config/mailing/mailing.module';
+import { ReminderModule } from './reminder/reminder.module';
+import { Reminder } from './reminder/reminder.entity';
+import { ReminderService } from './reminder/reminder.service';
+import { ScheduleModule } from '@nestjs/schedule';
 
 @Module({
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService,ReminderService],
   imports: [
+    ScheduleModule.forRoot(),
     TypeOrmModule.forRoot({
       type: 'postgres',
       host: 'localhost',
@@ -31,7 +36,7 @@ import { mailingModule,} from './config//mailing//mailing.module';
       username: 'postgres',
       password: 'HIBA1234',
       database: 'plantify',
-      entities: [Tools, Terrariums, Homewares, Vases, EssentionalOils, BotanicalArt, Users ], 
+      entities: [Tools, Terrariums, Homewares, Vases, EssentionalOils, BotanicalArt, Users , Reminder], 
       synchronize: true,
       retryAttempts: 5,
       retryDelay: 3000,
@@ -45,7 +50,8 @@ import { mailingModule,} from './config//mailing//mailing.module';
     AuthModule,
     UsersModule,
     mailingModule,
-    
+    ReminderModule,
+    ReminderModule
   ],
 })
 export class AppModule {}
