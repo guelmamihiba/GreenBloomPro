@@ -18,6 +18,7 @@ import { AuthModule } from './resources/auth/auth.module';
 import { UsersModule } from './resources/users/users.module';
 import { Users } from './resources/users/users.entity';
 import { mailingModule,} from './config//mailing//mailing.module';
+// import { ContactUsModule } from './config/mailing/mailing.module';
 
 @Module({
   controllers: [AppController],
@@ -30,7 +31,7 @@ import { mailingModule,} from './config//mailing//mailing.module';
       username: 'postgres',
       password: 'HIBA1234',
       database: 'plantify',
-      entities: [Tools, Terrariums, Homewares, Vases, EssentionalOils, BotanicalArt, Users], 
+      entities: [Tools, Terrariums, Homewares, Vases, EssentionalOils, BotanicalArt, Users ], 
       synchronize: true,
       retryAttempts: 5,
       retryDelay: 3000,
@@ -43,7 +44,8 @@ import { mailingModule,} from './config//mailing//mailing.module';
     EssentionalOilsModule,
     AuthModule,
     UsersModule,
-    mailingModule
+    mailingModule,
+    
   ],
 })
 export class AppModule {}

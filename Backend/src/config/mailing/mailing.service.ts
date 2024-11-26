@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { MailerService } from '@nestjs-modules/mailer';
-import { MailDataType } from './create-mailing.dto';
+import { MailDataType } from '../dto/create-mailing.dto';
 
 @Injectable()
 export class MailingService {
@@ -29,7 +29,7 @@ export class MailingService {
       .catch((error) => console.error('Error sending email:', error)); 
   }
 
-  // Function to send a generic email 
+  // Function to send the email 
   async sendMail(to: string, subject: string, html: string): Promise<void> {
     try {
       await this.mailerService.sendMail({ to, subject, html });

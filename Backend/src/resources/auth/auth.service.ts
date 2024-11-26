@@ -4,7 +4,7 @@ import { SignUpDto } from './dto/sign-up.dto';
 import { Users } from '../users/users.entity';
 import { JwtService } from '@nestjs/jwt';
 import * as bcrypt from 'bcrypt';
-import { MailingService } from '../../config//mailing/mailing.service';
+import { MailingService } from '../../config/mailing/mailing.service';
 
 import * as jwt from 'jsonwebtoken';
 import { jwtConstants } from './constants';
