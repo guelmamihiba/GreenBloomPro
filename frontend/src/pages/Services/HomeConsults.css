@@ -1,0 +1,426 @@
+:root {
+  --primary-color: #2c7a7b;
+  --secondary-color: #38b2ac;
+  --accent-color: #fbd38d;
+  --background-light: #e6fffa;
+  --background-dark: #234e52;
+  --text-color: #2d3748;
+  --text-light: #ffffff;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-light);
+}
+
+.hc-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.hc-header {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--text-light);
+  border-radius: 20px;
+  margin-bottom: 4rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hc-header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: url(../../picts&vds/metallic-green-leaves-textured.jpg) center / cover no-repeat;
+  /* animation: rotuate 20s linear infinite; */
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hc-header h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hc-header p {
+  font-size: 1.6rem;
+  max-width: 835px;
+  margin: 0 auto;
+  opacity: 0.9;
+  letter-spacing: 5px;
+  
+
+}
+
+.hc-intro {
+  margin-bottom: 4rem;
+  background-color: #e8f5e9;
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.hc-intro-content h2 {
+  font-size: 2.5rem;
+  color: orange;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+  letter-spacing: 5px;
+}
+
+.hc-intro-content h2::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--accent-color);
+}
+
+.hc-benefits {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.hc-benefits li {
+  display: flex;
+  align-items: center;
+  background-color: var(--background-light);
+  padding: 1rem;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hc-benefits li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hc-benefits li svg {
+  color: var(--secondary-color);
+  margin-right: 0.5rem;
+}
+
+.hc-process {
+  background: url(../../picts&vds/close-up-pink-green-caladium-plants.jpg) center / cover no-repeat;
+  color: var(--text-light);
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  margin-bottom: 4rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hc-process h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  color: var(--accent-color);
+  letter-spacing: 5px;
+  background-color: #ffffffad;
+  border-radius: 40px;
+  padding: 0.5rem;
+
+}
+
+.hc-timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hc-timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: var(--accent-color);
+}
+
+.hc-timeline-item {
+  padding: 2rem 0;
+  position: relative;
+}
+
+.hc-timeline-content {
+  background: #ffffffad;
+  border-radius: 15px;
+  padding: 1.5rem;
+  width: calc(50% - 2rem);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.blacky{
+  color: black;
+}
+
+.hc-timeline-content:hover {
+  transform: scale(1.05);
+}
+
+.hc-timeline-item:nth-child(odd) .hc-timeline-content {
+  margin-left: auto;
+}
+
+.hc-timeline-content h3 {
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+}
+
+.hc-features {
+  margin-bottom: 4rem;
+}
+
+.hc-features h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  letter-spacing: 5px;
+}
+
+.hc-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.hc-feature-card {
+  background-color: #e8f5e9;
+  border-radius: 15px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.hc-feature-card:hover,
+.hc-feature-card.active {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hc-feature-card svg {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  color: orange;
+}
+
+.hc-feature-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.hc-showcase {
+  background: url(../../picts&vds/green-vegetation.jpg) center / cover no-repeat;
+  color: var(--text-light);
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  margin-bottom: 4rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hc-showcase h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--accent-color);
+  letter-spacing: 5px;
+}
+
+.hc-showcase-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hc-before-after {
+  flex: 1;
+  display: flex;
+  gap: 2rem;
+}
+
+.hc-before,
+.hc-after {
+  background-color: #ffffff8c;
+  border-radius: 15px;
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.hc-before h3,
+.hc-after h3 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  letter-spacing: 4px;
+}
+
+.hc-before ul,
+.hc-after ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.hc-before li,
+.hc-after li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.hc-before li svg,
+.hc-after li svg {
+  margin-right: 0.5rem;
+}
+
+.hc-testimonial {
+  flex: 1;
+  background-color: #ffffff8c;
+  border-radius: 15px;
+  padding: 2rem;
+}
+
+.hc-testimonial blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: white;
+}
+.hc-tagline{
+  color: white;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  margin-bottom: 20px;
+  letter-spacing: 11px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.hc-client {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.hc-cta {
+  text-align: center;
+  background: url(../../picts&vds/natural-plant-assortment-monochromatic-background.jpg) center / cover no-repeat;
+  color: var(--text-light);
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hc-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 5px;
+}
+
+.hc-cta p {
+  font-size: 1.2rem;
+  max-width: 643px;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+  letter-spacing: 5px;
+}
+
+.hc-cta-button {
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.hc-cta-button:hover {
+  background-color: var(--text-light);
+  color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hc-cta-button svg {
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .hc-header h1 {
+    font-size: 3rem;
+  }
+
+  .hc-header p {
+    font-size: 1.2rem;
+  }
+
+  .hc-intro-content h2 {
+    font-size: 2rem;
+  }
+
+  .hc-timeline::before {
+    left: 0;
+  }
+
+  .hc-timeline-content {
+    width: calc(100% - 2rem);
+    margin-left: 2rem !important;
+  }
+
+  .hc-showcase-content {
+    flex-direction: column;
+  }
+
+  .hc-before-after {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .hc-header {
+    padding: 4rem 1rem;
+  }
+
+  .hc-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .hc-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .hc-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

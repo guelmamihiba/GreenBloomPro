@@ -1,0 +1,81 @@
+/* General Styles for the Account Page */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.account-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.account-container {
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.logout-button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
+  font-size: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.account-details {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.details-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.details-item {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+  color: #444;
+}
+
+.view-address {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.view-address:hover {
+  text-decoration: underline;
+}
+/* Remove the display of the icon */
+.fi {
+  display: none !important;
+}

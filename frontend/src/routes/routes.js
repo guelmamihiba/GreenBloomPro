@@ -1,18 +1,22 @@
-import AboutUs from "../pages/AboutUs";
-import BotanicalArt from "../pages/BotanicalArt";
-import BusinessConsults from "../pages/BussinessConsults";
-import EssentionalOils from "../pages/EssentionalOils";
-import HomeConsults from "../pages/HomeConsults";
-import HomePage from "../pages/HomePage";
-import PlantCareAdvice from "../pages/PlantCareAdvice";
-import PlantRepotting from "../pages/PlantRepotting";
-import Profile from "../pages/Profile";
-import SignIn from "../pages/SignIn";
-import SignUp from "../pages/SignUp";
-import Terrariums from "../pages/Terrariums";
-import Tools from "../pages/Tools";
-import Vases from "../pages/Vases";
-import VerifyEmail from "../pages/VerifyEmail";
+import AboutUs from "../pages/AboutUs/AboutUs";
+import BotanicalArt from "../pages/Shop/BotanicalArt";
+import BusinessConsults from "../pages/Services/BussinessConsults";
+import EssentionalOils from "../pages/Shop/EssentionalOils";
+import FAQ from "../pages/AboutUs/Faqs";
+import GetInTouch from "../pages/Auth/GetInTouch";
+import HomeConsults from "../pages/Services/HomeConsults";
+import HomePage from "../pages/Home/HomePage";
+import PlantCareAdvice from "../pages/Services/PlantCareAdvice";
+import PlantRepotting from "../pages/Services/PlantRepotting";
+import Profile from "../pages/Auth/Profile";
+import SignIn from "../pages/Auth/SignIn";
+import SignUp from "../pages/Auth/SignUp";
+import Terrariums from "../pages/Shop/Terrariums";
+import Tools from "../pages/Shop/Tools";
+import Vases from "../pages/Shop/Vases";
+import VerifyEmail from "../pages/Auth/VerifyEmail";
+import Chatroom from "../pages/Chatroom/Chatroom";
+import CartPage from "../pages/Shop/CartPage";
 
 export const routes = [
     {
@@ -47,7 +51,7 @@ export const routes = [
         component: PlantRepotting
     },
     {
-        name: 'Essential Oils',
+        name: 'Essentional Oils',
         path: '/essentional-oils',
         component: EssentionalOils
     },
@@ -91,5 +95,26 @@ export const routes = [
         name: 'veryEmail',
         path: '/very-email',
         component: VerifyEmail
+    },
+    {
+     name: 'contact',
+     path: '/contact-us',
+     component: GetInTouch
+    },
+    {
+        name: 'faqsList',
+        path: '/faqs-List',
+        component: FAQ
+    },
+    {
+        name: 'chatroom',
+        path: '/chatroom',
+        component: Chatroom
+
+    },
+    {
+        name: "cartePage",
+        path: "/cartePage",
+        component: CartPage
     }
 ]
