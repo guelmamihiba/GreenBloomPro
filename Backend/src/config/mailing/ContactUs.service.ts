@@ -1,18 +1,17 @@
 import { Injectable } from '@nestjs/common';
 import { MailerService } from '@nestjs-modules/mailer';
-import { ContactDto } from '../dto/get-in-touch.dto';
+import { ContactDto } from '../dto/create-get-in-touch.dto';
 
 @Injectable()
 export class ContactService {
   constructor(private readonly mailerService: MailerService) {}
 
-  // Send Contact Form Email
   async sendContactEmail(contactDto: ContactDto): Promise<void> {
     const { name, email, phone, message, object } = contactDto;
 
     try {
       await this.mailerService.sendMail({
-        to: email, // Dynamic recipient from the ContactDto
+        to: email,
         subject: object,
         html: `
           <h1>Contact Form Details</h1>

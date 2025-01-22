@@ -1,7 +1,18 @@
+import { ApiProperty } from "@nestjs/swagger";
+
 export class CreateVasesDto {
+    @ApiProperty()
     readonly name: string;
+    
+    @ApiProperty()
     readonly description: string;
+    
+    @ApiProperty()
     readonly price: number;
+    
+    @ApiProperty()
     readonly imageUrl: string;
-    readonly sizing: string;  // Specific field for Vases
+    
+    @ApiProperty()
+    readonly sizing: string; 
 }

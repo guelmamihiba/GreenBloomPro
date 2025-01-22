@@ -3,5 +3,5 @@ export class UpdateVasesDto {
     readonly description?: string;
     readonly price?: number;
     readonly imageUrl?: string;
-    readonly sizing?: string;  // Specific field for Vases
+    readonly sizing?: string;  
 }

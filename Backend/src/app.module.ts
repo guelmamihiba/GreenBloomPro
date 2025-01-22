@@ -1,33 +1,38 @@
 import { Module } from '@nestjs/common';
+import { ScheduleModule } from '@nestjs/schedule';
+import { TypeOrmModule } from '@nestjs/typeorm';
+import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { Tools} from './resources/shop/tools/tools.entity';
-import { Terrariums} from './resources/shop/terrarium/terrarium.entity';
-import { Homewares} from './resources/shop/home_ware_decor/home_ware_decor.entity';
-import { Vases} from './resources/shop/vases/vases.entity';
-import { EssentionalOils } from './resources/shop/essentional_oils/essentional_oils.entity';
-import { BotanicalArt } from './resources/shop/botanical_art/botanical_art.entity';
-import { VasesModule } from './resources/shop/vases/vases.module';
-import { TerrariumModule } from './resources/shop/terrarium/terrarium.module';
-import { HomeWareDecorModule } from './resources/shop/home_ware_decor/home_ware_decor.module';
-import { ToolsModule } from './resources/shop/tools/tools.module';
-import { EssentionalOilsModule } from './resources/shop/essentional_oils/essentional_oils.module';
-import { BotanicalArtModule } from './resources/shop/botanical_art/botanical_art.module';
+import { mailingModule } from './config/mailing/mailing.module';
 import { AuthModule } from './resources/auth/auth.module';
+import { ChatModule } from './resources/ChatRoom/chat.module';
+import { BotanicalArt } from './resources/shop/botanical_art/botanical_art.entity';
+import { BotanicalArtModule } from './resources/shop/botanical_art/botanical_art.module';
+import { EssentionalOils } from './resources/shop/essentional_oils/essentional_oils.entity';
+import { EssentionalOilsModule } from './resources/shop/essentional_oils/essentional_oils.module';
+import { Homewares } from './resources/shop/home_ware_decor/home_ware_decor.entity';
+import { HomeWareDecorModule } from './resources/shop/home_ware_decor/home_ware_decor.module';
+import { Terrariums } from './resources/shop/terrarium/terrarium.entity';
+import { TerrariumModule } from './resources/shop/terrarium/terrarium.module';
+import { Tools } from './resources/shop/tools/tools.entity';
+import { ToolsModule } from './resources/shop/tools/tools.module';
+import { Vases } from './resources/shop/vases/vases.entity';
+import { VasesModule } from './resources/shop/vases/vases.module';
+import { User } from './resources/users/users.entity';
 import { UsersModule } from './resources/users/users.module';
-import { Users } from './resources/users/users.entity';
-import { mailingModule,} from './config//mailing//mailing.module';
-// import { ContactUsModule } from './config/mailing/mailing.module';
-import { ReminderModule } from './reminder/reminder.module';
-import { Reminder } from './reminder/reminder.entity';
-import { ReminderService } from './reminder/reminder.service';
-import { ScheduleModule } from '@nestjs/schedule';
+import { StripeModule } from './payment/payment.module';
+import { FeaturedPlant } from './resources/shop/HomePage/featuredPlants.entity';
+import { FeaturedPlantsModule } from './resources/shop/HomePage/FeaturedPlants.module';
 
 @Module({
   controllers: [AppController],
-  providers: [AppService,ReminderService],
+  providers: [AppService],
   imports: [
+    ConfigModule.forRoot({
+      isGlobal: true,
+      envFilePath: '.env',
+    }),
     ScheduleModule.forRoot(),
     TypeOrmModule.forRoot({
       type: 'postgres',
@@ -36,12 +41,12 @@ import { ScheduleModule } from '@nestjs/schedule';
       username: 'postgres',
       password: 'HIBA1234',
       database: 'plantify',
-      entities: [Tools, Terrariums, Homewares, Vases, EssentionalOils, BotanicalArt, Users , Reminder], 
+      entities: [Tools, Terrariums, Homewares, Vases, EssentionalOils, BotanicalArt, User , FeaturedPlant],
       synchronize: true,
       retryAttempts: 5,
       retryDelay: 3000,
     }),
-    VasesModule ,
+    VasesModule,
     TerrariumModule,
     BotanicalArtModule,
     HomeWareDecorModule,
@@ -50,8 +55,10 @@ import { ScheduleModule } from '@nestjs/schedule';
     AuthModule,
     UsersModule,
     mailingModule,
-    ReminderModule,
-    ReminderModule
+    ChatModule,
+    StripeModule,
+    FeaturedPlantsModule
   ],
 })
 export class AppModule {}
+

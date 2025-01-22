@@ -1,20 +1,17 @@
-import {Controller, Get, Post, Body, Patch, Param, Delete,
-} from '@nestjs/common';
-import { EssentionalOilsService } from './essentional_oils.service';
-import { CreateEssentionalOilsDto } from './create-essentional_oils.dto';
-import { UpdateEssentionalOilsDto } from './update-essentional_oils.dto';
-import { Tools } from '../tools/tools.entity';
-import { ApiCreatedResponse, ApiNoContentResponse, ApiUnauthorizedResponse, ApiBadRequestResponse, ApiResponse, ApiNotFoundResponse, ApiInternalServerErrorResponse,  ApiNotImplementedResponse, ApiServiceUnavailableResponse,ApiTags,
-} from '@nestjs/swagger';
+import { Controller,Get,Post,Body, Patch,Param,Delete,} from '@nestjs/common';
+import { FeaturedPlantsService } from './featuredPlants.service';
+import { CreateFeaturedPlantDto } from './create-featured-plant.dto';
+import { UpdateFeaturedPlantDto } from './update-featured-plant.dto';
+import {ApiCreatedResponse,ApiNoContentResponse,  ApiUnauthorizedResponse, ApiBadRequestResponse, ApiResponse, ApiNotFoundResponse, ApiInternalServerErrorResponse, ApiNotImplementedResponse, ApiServiceUnavailableResponse,ApiTags,} from '@nestjs/swagger';
 
-@ApiTags('essentional-oils')
-@Controller('essentional-oils')
-export class EssentionalOilsController {
-  constructor(private readonly essentialOilsService: EssentionalOilsService) {}
+@ApiTags('featured-plants')
+@Controller('featured-plants')
+export class FeaturedPlantsController {
+  constructor(private readonly featuredPlantsService: FeaturedPlantsService) {}
 
   @ApiCreatedResponse({
     description: 'The record has been successfully created.',
-    type: Tools,
+    type: FeaturedPlantsController,
   })
   @ApiNoContentResponse({ description: 'No Content' })
   @ApiUnauthorizedResponse({ description: 'Unauthorized' })
@@ -26,13 +23,13 @@ export class EssentionalOilsController {
   @ApiServiceUnavailableResponse({ description: 'Service Unavailable' })
 
   @Post()
-  create(@Body() createEssentialOilsDto: CreateEssentionalOilsDto) {
-    return this.essentialOilsService.create(createEssentialOilsDto);
+  create(@Body() createFeaturedPlantDto: CreateFeaturedPlantDto) {
+    return this.featuredPlantsService.create(createFeaturedPlantDto);
   }
 
   @ApiCreatedResponse({
     description: 'The record has been successfully created.',
-    type: Tools,
+    type: FeaturedPlantsController,
   })
   @ApiNoContentResponse({ description: 'No Content' })
   @ApiUnauthorizedResponse({ description: 'Unauthorized' })
@@ -45,12 +42,11 @@ export class EssentionalOilsController {
 
   @Get()
   async findAll() {
-    return this.essentialOilsService.findAll();
+    return this.featuredPlantsService.findAll();
   }
-
   @ApiCreatedResponse({
     description: 'The record has been successfully created.',
-    type: Tools,
+    type: FeaturedPlantsController,
   })
   @ApiNoContentResponse({ description: 'No Content' })
   @ApiUnauthorizedResponse({ description: 'Unauthorized' })
@@ -63,12 +59,12 @@ export class EssentionalOilsController {
 
   @Get(':id')
   async findOne(@Param('id') id: string) {
-    return this.essentialOilsService.findOne(+id);
+    return this.featuredPlantsService.findOne(+id);
   }
 
   @ApiCreatedResponse({
     description: 'The record has been successfully created.',
-    type: Tools,
+    type: FeaturedPlantsController,
   })
   @ApiNoContentResponse({ description: 'No Content' })
   @ApiUnauthorizedResponse({ description: 'Unauthorized' })
@@ -82,14 +78,14 @@ export class EssentionalOilsController {
   @Patch(':id')
   async update(
     @Param('id') id: string,
-    @Body() updateEssentialOilsDto: UpdateEssentionalOilsDto,
+    @Body() updateFeaturedPlantDto: UpdateFeaturedPlantDto,
   ) {
-    return this.essentialOilsService.update(+id, updateEssentialOilsDto);
+    return this.featuredPlantsService.update(+id, updateFeaturedPlantDto);
   }
 
   @ApiCreatedResponse({
     description: 'The record has been successfully created.',
-    type: Tools,
+    type: FeaturedPlantsController,
   })
   @ApiNoContentResponse({ description: 'No Content' })
   @ApiUnauthorizedResponse({ description: 'Unauthorized' })
@@ -99,9 +95,9 @@ export class EssentionalOilsController {
   @ApiInternalServerErrorResponse({ description: 'Internal Server Error' })
   @ApiNotImplementedResponse({ description: 'Not Implemented' })
   @ApiServiceUnavailableResponse({ description: 'Service Unavailable' })
-  
+
   @Delete(':id')
   async remove(@Param('id') id: string) {
-    return this.essentialOilsService.remove(+id);
+    return this.featuredPlantsService.remove(+id);
   }
 }

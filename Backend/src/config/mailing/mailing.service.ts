@@ -29,8 +29,8 @@ export class MailingService {
       .catch((error) => console.error('Error sending email:', error)); 
   }
 
-  // Function to send the email 
   async sendMail(to: string, subject: string, html: string): Promise<void> {
+    console.log(`Sending email to: ${to}`);
     try {
       await this.mailerService.sendMail({ to, subject, html });
       console.log('Email sent successfully');
@@ -39,4 +39,4 @@ export class MailingService {
       throw new Error('Failed to send email');
     }
   }
-}
+}  

@@ -1,20 +1,25 @@
-// shop/essential-oils/essential-oil.entity.ts
+import { ApiProperty } from '@nestjs/swagger';
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity("essentional_oils")
-export class EssentionalOils {
-    @PrimaryGeneratedColumn()
+export class EssentionalOils {  
+   @PrimaryGeneratedColumn()
+   @ApiProperty()
     id: number;
 
-    @Column()
+   @ApiProperty()
+   @Column()
     name: string;
 
-    @Column()
+   @ApiProperty()
+   @Column()
     description: string;
 
-    @Column()
+   @ApiProperty()
+   @Column('decimal', { precision: 6, scale: 2 })
     price: number;
 
-    @Column()
+   @ApiProperty()
+   @Column()
     imageUrl: string;
 }
