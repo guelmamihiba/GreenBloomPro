@@ -127,7 +127,7 @@
 
 .auth-info {
   flex: 1;
-  background: linear-gradient(338deg, var(--primary-color), #45a049a3)#e8f5e9;
+  background-image: url("../../picts&vds/Monstera-Deliciosa.jpg");
   color: var(--text-light);
   padding: 3rem;
   display: flex;

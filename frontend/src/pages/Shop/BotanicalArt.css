@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 :root {
-  --primary-color: #4caf50;
-  --secondary-color: #45a049;
-  --accent-color: #ff9800;
-  --background-color: #f0f8f0;
-  --text-color: #333;
+  --primary-color: #3a5a40;
+  --secondary-color: #588157;
+  --accent-color: #a3b18a;
+  --background-color: #f1f8e9;
+  --text-color: #344e41;
   --card-background: #ffffff;
   --price-tag-color: #ff6b6b;
 }
@@ -17,12 +17,12 @@ body {
   line-height: 1.6;
 }
 
-.essential-oils {
+.botanical-art {
   width: 100%;
   padding-bottom: 40px;
 }
 
-.essential-oils-header {
+.botanical-art-header {
   background-image: url("../../picts&vds/close-up-pink-green-caladium-plants.jpg");
   background-size: cover;
   background-position: center;
@@ -33,7 +33,7 @@ body {
   position: relative;
 }
 
-.essential-oils-header::before {
+.botanical-art-header::before {
   content: "";
   position: absolute;
   top: 0;
@@ -44,68 +44,63 @@ body {
   z-index: 1;
 }
 
-.essential-oils-header h1,
-.essential-oils-header p {
+.botanical-art-header h1,
+.botanical-art-header p {
   position: relative;
   z-index: 2;
 }
 
-.essential-oils-header h1 {
+.botanical-art-header h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  letter-spacing: 5px;
-  font-weight: bold;
 }
 
-.essential-oils-header p {
+.botanical-art-header p {
   font-size: 1.2rem;
-  max-width: 826px;
+  max-width: 600px;
   margin: 0 auto;
-  letter-spacing: 5px;
-  font-weight: inherit;
 }
 
-.essential-oils-info {
+.botanical-art-info {
   max-width: 800px;
   margin: 0 auto 40px;
   text-align: center;
   padding: 0 20px;
 }
 
-.essential-oils-info h2 {
+.botanical-art-info h2 {
   color: var(--primary-color);
   margin-bottom: 1rem;
-  letter-spacing: 5px;
 }
 
-.essential-oils-info ul {
+.botanical-art-info ul {
   list-style-type: none;
   padding: 0;
 }
 
-.essential-oils-info li {
+.botanical-art-info li {
   margin-bottom: 0.5rem;
 }
 
-.essential-oils-info li::before {
+.botanical-art-info li::before {
   content: "✓";
   color: var(--primary-color);
   margin-right: 0.5rem;
 }
 
-.container {
+.botanical-art-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.search-container {
+.botanical-art-search-container {
   position: relative;
   max-width: 600px;
   margin: 0 auto 40px;
 }
 
-.search-input {
+.botanical-art-search-input {
   width: 100%;
   padding: 15px 25px 15px 50px;
   font-size: 16px;
@@ -115,12 +110,12 @@ body {
   transition: all 0.3s ease;
 }
 
-.search-input:focus {
+.botanical-art-search-input:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+  box-shadow: 0 0 0 3px rgba(58, 90, 64, 0.3);
 }
 
-.search-icon {
+.botanical-art-search-icon {
   position: absolute;
   left: 20px;
   top: 50%;
@@ -128,73 +123,76 @@ body {
   color: var(--primary-color);
 }
 
-.products-grid {
+.botanical-art-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 30px;
 }
 
-.product-card {
+.botanical-art-card {
   transition: transform 0.3s ease;
 }
 
-.product-card:hover {
+.botanical-art-card:hover {
   transform: translateY(-10px);
 }
 
-.card {
+.botanical-art-item {
   background-color: var(--card-background);
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease;
-  height: 400px; /* Fixed height for all cards */
+  height: auto;
+  min-height: 350px;
   display: flex;
   flex-direction: column;
 }
 
-.card:hover {
+.botanical-art-item:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.card-img {
+.botanical-art-image {
   width: 100%;
-  height: 270px; /* Fixed height for all images */
+  height: 250px;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-.card:hover .card-img {
+.botanical-art-item:hover .botanical-art-image {
   transform: scale(1.05);
 }
 
-.card-body {
+.botanical-art-details {
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  height: calc(100% - 250px);
   flex-grow: 1;
-  overflow-y: auto; /* Allow scrolling if content exceeds fixed height */
+  overflow-y: auto;
 }
 
-.card-title {
+.botanical-art-title {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--primary-color);
 }
 
-.card-description {
+.botanical-art-description {
   font-size: 0.9rem;
   color: #666;
   margin-bottom: 0.5rem;
   flex-grow: 1;
   overflow: hidden;
+  text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
 
-.card-footer {
+.botanical-art-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -203,13 +201,13 @@ body {
   border-top: 1px solid #eee;
 }
 
-.price-tag {
+.botanical-art-price {
   font-weight: 600;
   font-size: 1.1rem;
   color: var(--price-tag-color);
 }
 
-.add-to-cart-btn {
+.botanical-art-add-to-cart {
   background-color: var(--primary-color);
   color: white;
   border: none;
@@ -224,12 +222,12 @@ body {
   gap: 0.5rem;
 }
 
-.add-to-cart-btn:hover {
+.botanical-art-add-to-cart:hover {
   background-color: var(--secondary-color);
   transform: translateY(-2px);
 }
 
-.alert {
+.botanical-art-alert {
   position: fixed;
   top: 20px;
   left: 50%;
@@ -254,7 +252,7 @@ body {
   }
 }
 
-.no-results {
+.botanical-art-no-results {
   text-align: center;
   padding: 2rem;
   font-size: 1.1rem;
@@ -262,7 +260,48 @@ body {
   grid-column: 1 / -1;
 }
 
-.read-more-btn {
+@media (max-width: 768px) {
+  .botanical-art-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .botanical-art-header p {
+    font-size: 1rem;
+  }
+  .botanical-art-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .botanical-art-header h1 {
+    font-size: 2rem;
+  }
+  .botanical-art-details {
+    padding: 1rem;
+    height: calc(100% - 200px);
+  }
+  .botanical-art-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .botanical-art-add-to-cart {
+    width: 100%;
+    justify-content: center;
+  }
+  .botanical-art-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  .botanical-art-item {
+    min-height: 300px;
+  }
+  .botanical-art-image {
+    height: 200px;
+  }
+}
+
+.botanical-art-read-more {
   background-color: var(--secondary-color);
   color: white;
   border: none;
@@ -278,12 +317,12 @@ body {
   text-align: center;
 }
 
-.read-more-btn:hover {
+.botanical-art-read-more:hover {
   background-color: var(--primary-color);
   transform: translateY(-2px);
 }
 
-.modal-overlay {
+.botanical-art-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -296,7 +335,7 @@ body {
   z-index: 1000;
 }
 
-.modal-contentt {
+.botanical-art-modal-content {
   background-color: white;
   padding: 2rem;
   border-radius: 12px;
@@ -304,10 +343,10 @@ body {
   width: 90%;
   max-height: 90vh;
   overflow-y: auto;
-  position: relative
+  position: relative;
 }
 
-.close-modal {
+.botanical-art-close-modal {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -317,8 +356,8 @@ body {
   color: var(--text-color);
 }
 
-.modal-img {
-  width: 72%;
+.botanical-art-modal-img {
+  width: 74%;
   height: 268px;
   object-fit: cover;
   border-radius: 8px;
@@ -326,63 +365,20 @@ body {
   margin-left: 52px;
 }
 
-.modal-content h2 {
+.botanical-art-modal-content h2 {
   color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
-.modal-description,
-.modal-price,
-.modal-origin,
-.modal-uses {
+.botanical-art-modal-description,
+.botanical-art-modal-price,
+.botanical-art-modal-artist,
+.botanical-art-modal-medium {
   margin-bottom: 1rem;
 }
 
-.modal-add-to-cart {
+.botanical-art-modal-add-to-cart {
   width: 100%;
   justify-content: center;
-}
-
-@media (max-width: 768px) {
-  .essential-oils-header h1 {
-    font-size: 2.5rem;
-  }
-
-  .essential-oils-header p {
-    font-size: 1rem;
-  }
-  .products-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-}
-
-@media (max-width: 480px) {
-  .essential-oils-header h1 {
-    font-size: 2rem;
-  }
-  .card-body {
-    padding: 1rem;
-  }
-  .card-footer {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-  .add-to-cart-btn {
-    width: 100%;
-    justify-content: center;
-  }
-  .products-grid {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  }
-  .card {
-    height: 350px; /* Slightly smaller for mobile */
-  }
-  .card-img {
-    height: 150px; /* Smaller image for mobile */
-  }
-  .modal-content {
-    padding: 1rem;
-  }
 }
 
